@@ -128,3 +128,10 @@ SELECT * from hero
 inner join class
 on hero.class_id = class.class_id
 where class_name = 'Archers';
+
+--8. average level per class
+
+SELECT avg(player_level)
+from player
+inner join hero
+on player.hero_id = hero.hero_id;

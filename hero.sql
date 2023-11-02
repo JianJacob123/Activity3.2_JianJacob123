@@ -121,3 +121,10 @@ SELECT player_id, player_name, hero_name, is_active FROM player
 INNER JOIN hero
 on hero.hero_id = player.hero_id
 where is_active = true;
+
+--7. select heroes archers
+
+SELECT * from hero
+inner join class
+on hero.class_id = class.class_id
+where class_name = 'Archers';

@@ -114,3 +114,10 @@ where hero_id = 1;
 
 delete from HeroItem
 where item_id = 101;
+
+--6. select active players
+
+SELECT player_id, player_name, hero_name, is_active FROM player
+INNER JOIN hero
+on hero.hero_id = player.hero_id
+where is_active = true;
